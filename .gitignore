@@ -1,3 +1,5 @@
 *.o
-mipsdecode
+mipsdecode*
 .sconsign.dblite
+*.obj
+*~

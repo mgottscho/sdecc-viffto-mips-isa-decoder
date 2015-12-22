@@ -4,9 +4,13 @@
 //#include <iomanip>
 //#include <iostream>
 //#include <sstream>
-//#include <cstdint>
 
+//total hack to compile on Hoffman2...
+#ifndef _WIN32
 typedef unsigned long uint64_t;
+#else
+#include <cstdint>
+#endif
 
 inline uint64_t
 mask(int nbits)
