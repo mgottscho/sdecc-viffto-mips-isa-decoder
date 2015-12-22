@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010 Advanced Micro Devices, Inc.
+ * Copyright (c) 2012 Google
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,14 +28,31 @@
  * Authors: Gabe Black
  */
 
-#ifndef __SIM_FAULT_FWD_HH__
-#define __SIM_FAULT_FWD_HH__
+#ifndef __ARCH_MIPS_DECODER_HH__
+#define __ARCH_MIPS_DECODER_HH__
 
-#include "base/refcnt.hh"
+//#include <cstdint>
+#include "decoder.hh"
 
-class FaultBase;
-typedef RefCountingPtr<FaultBase> Fault;
+namespace MipsISA
+{
 
-FaultBase * const NoFault = 0;
+typedef uint64_t ExtMachInst;
 
-#endif // __SIM_FAULT_FWD_HH__
+class Decoder
+{
+  protected:
+    //The extended machine instruction being generated
+    ExtMachInst emi;
+
+  public:
+    Decoder()
+    {}
+
+  public:
+    bool decodeInst(ExtMachInst mach_inst);
+};
+
+} // namespace MipsISA
+
+#endif // __ARCH_MIPS_DECODER_HH__
