@@ -1,0 +1,12 @@
+Author: Mark Gottscho
+Email: mgottscho@ucla.edu
+
+This is a simple MIPS32 ISA decoder that simply tells you whether a bitstring of length 32 is a valid or ILLEGAL instruction. The code is based on extracted C++ from the gem5 simulator, and was hacked heavily to reduce dependencies on other parts of the simulator codebase.
+
+gem5 version: 50ff05095970
+
+Steps to get code from which this was extracted:
+
+1) Build gem5 for MIPS, optimization level shouldn't matter.
+2) Under build/MIPS/ there is the source tree that you need. We can't use src/ because there is a lot of Python code that is compiled/embedded into C++ dynamically based on the target ISA. In fact, the MIPS ISA decoder in gem5 is actually completely synthesized from Python and C++ special rules files. However, we still need that C++ code.
+3) Look under build/MIPS/arch/mips to start. Most interested in these files. Look for Decoder::decodeInst(). The rest is just trying to rip out the relevant code without dependencies, and glue things together as needed in a new project.
