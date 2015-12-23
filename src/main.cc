@@ -1,6 +1,8 @@
 #include "MyDecoder.hh"
 #include <iostream>
 #include <sstream>
+#include <iomanip>
+#include <stdint.h>
 
 int main(int argc, char** argv) {
     if (argc != 2) {
@@ -9,11 +11,20 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    MipsISA::ExtMachInst inst;
+    uint32_t raw;
+
     std::stringstream ss;
     std::string instString(argv[1]);
     ss << std::hex << instString;
-    ss >> inst;
+    ss >> raw;
+
+    std::cout << "Raw input:          " << instString << std::endl;
+    std::cout.fill('0');
+    std::cout << "Interpreted as:   0x" << std::hex << std::setw(8) << raw << std::dec << std::endl;
+    std::cout.fill(' ');
+    std::cout << std::endl;
+    
+    MipsISA::ExtMachInst inst = static_cast<MipsISA::ExtMachInst>(raw);
 
     MipsISA::Decoder decoder;
     bool ret = decoder.decodeInst(inst);

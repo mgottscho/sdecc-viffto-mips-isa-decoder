@@ -1,16 +1,14 @@
 #ifndef __DECODER_HH__
 #define __DECODER_HH__
 
-//#include <iomanip>
-//#include <iostream>
-//#include <sstream>
+#include <stdint.h>
 
 //total hack to compile on Hoffman2...
-#ifndef _WIN32
+/*#ifndef _WIN32
 typedef unsigned long uint64_t;
 #else
 #include <cstdint>
-#endif
+#endif*/
 
 inline uint64_t
 mask(int nbits)
