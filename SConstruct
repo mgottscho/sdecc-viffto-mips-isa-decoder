@@ -4,7 +4,7 @@ import platform
 os_info = platform.platform()
 print os_info
 
-if os_info.find('Linux') >= 0: # Linux build
+if os_info.find('Linux') >= 0 or os_info.find('Darwin') >= 0: # Linux or Mac build
     env = Environment()
     env.Append(CPPFLAGS = '-Wall')
     env.Append(CPPPATH = ['src',])
