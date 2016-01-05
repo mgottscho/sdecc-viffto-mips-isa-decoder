@@ -18,16 +18,17 @@ int main(int argc, char** argv) {
     ss << std::hex << instString;
     ss >> raw;
 
-    std::cout << "Raw input:          " << instString << std::endl;
+    std::cout << "Raw input: " << instString << std::endl;
     std::cout.fill('0');
-    std::cout << "Interpreted as:   0x" << std::hex << std::setw(8) << raw << std::dec << std::endl;
+    std::cout << "Interpreted as: 0x" << std::hex << std::setw(8) << raw << std::dec << std::endl;
     std::cout.fill(' ');
-    std::cout << std::endl;
     
     MipsISA::ExtMachInst inst = static_cast<MipsISA::ExtMachInst>(raw);
 
     MipsISA::Decoder decoder;
+    std::cout << "Disassembly: ";
     bool ret = decoder.decodeInst(inst);
+    std::cout << "Result: ";
     if (ret) {
         std::cout << "ILLEGAL" << std::endl;
         return ret;

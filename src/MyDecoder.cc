@@ -1,5 +1,6 @@
 #include "decoder.hh"
 #include "MyDecoder.hh"
+#include <iostream>
 
 //#include <cmath>
 
@@ -31,18 +32,21 @@ Decoder::decodeInst(ExtMachInst machInst)
                     case 0x0:  
                       // BasicOp::movf(['\n                            Rd = (getCondCode(FCSR, CC) == 0) ? Rd : Rs;\n                        '],{})
                       
+                              std::cout << "movf" << std::endl;
                               return 0;// Movf(machInst);
                       break;
                     
                     case 0x1:  
                       // BasicOp::movt(['\n                            Rd = (getCondCode(FCSR, CC) == 1) ? Rd : Rs;\n                        '],{})
                       
+                              std::cout << "movt" << std::endl;
                               return 0;// Movt(machInst);
                       break;
                     
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -59,18 +63,21 @@ Decoder::decodeInst(ExtMachInst machInst)
                             case 0x1:  
                               // BasicOp::ssnop([';'],{})
                               
+                                      std::cout << "ssnop" << std::endl;
                                       return 0;// Ssnop(machInst);
                               break;
                             
                             case 0x3:  
                               // BasicOp::ehb([';'],{})
                               
+                                      std::cout << "ehb" << std::endl;
                                       return 0;// Ehb(machInst);
                               break;
                             
                             default:
                               
                               // Nop::nop(([], {}))
+                              std::cout << "nop" << std::endl;
                               return 0;// Nop("",machInst);
                               break;
                             }
@@ -78,6 +85,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:  
                           // BasicOp::sll([' Rd = Rt_uw << SA; '],{})
                           
+                                  std::cout << "sll" << std::endl;
                                   return 0;// Sll(machInst);
                           break;
                         }
@@ -85,6 +93,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -98,18 +107,21 @@ Decoder::decodeInst(ExtMachInst machInst)
                         case 0x0:  
                           // BasicOp::srl([' Rd = Rt_uw >> SA; '],{})
                           
+                                  std::cout << "srl" << std::endl;
                                   return 0;// Srl(machInst);
                           break;
                         
                         case 0x1:  
                           // BasicOp::rotr(['\n                                Rd = (Rt_uw << (32 - SA)) | (Rt_uw >> SA);\n                            '],{})
                           
+                                  std::cout << "rotr" << std::endl;
                                   return 0;// Rotr(machInst);
                           break;
                         
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -117,6 +129,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -133,6 +146,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -161,6 +175,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -174,6 +189,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -256,6 +272,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -290,6 +307,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -324,6 +342,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -441,6 +460,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -448,6 +468,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -487,6 +508,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -494,6 +516,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -540,6 +563,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -547,6 +571,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -584,6 +609,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -630,6 +656,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -674,6 +701,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -696,6 +724,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -703,6 +732,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -756,6 +786,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -873,6 +904,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -880,6 +912,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -1047,6 +1080,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -1067,6 +1101,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -1199,6 +1234,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -1318,6 +1354,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -1397,6 +1434,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -1461,6 +1499,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -1489,6 +1528,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -1511,6 +1551,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -1518,6 +1559,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -1544,6 +1586,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -1611,6 +1654,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -1669,6 +1713,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -1694,6 +1739,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                                 default:
                                   
                                   // Unknown::unknown(([], {}))
+                                  std::cout << "UNKNOWN" << std::endl;
                                   return 1;//Unknown(machInst);
                                   break;
                                 }
@@ -1829,6 +1875,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -1887,6 +1934,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -1894,6 +1942,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -1955,6 +2004,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -2013,6 +2063,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -2038,6 +2089,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                                 default:
                                   
                                   // Unknown::unknown(([], {}))
+                                  std::cout << "UNKNOWN" << std::endl;
                                   return 1;//Unknown(machInst);
                                   break;
                                 }
@@ -2155,6 +2207,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -2213,6 +2266,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -2374,6 +2428,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                                 default:
                                   
                                   // Unknown::unknown(([], {}))
+                                  std::cout << "UNKNOWN" << std::endl;
                                   return 1;//Unknown(machInst);
                                   break;
                                 }
@@ -2513,6 +2568,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -2571,6 +2627,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                             default:
                               
                               // Unknown::unknown(([], {}))
+                              std::cout << "UNKNOWN" << std::endl;
                               return 1;//Unknown(machInst);
                               break;
                             }
@@ -2578,6 +2635,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -2585,6 +2643,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -2599,6 +2658,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -2771,6 +2831,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -2805,6 +2866,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -2821,6 +2883,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -2849,6 +2912,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -2877,6 +2941,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -2905,6 +2970,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -2933,6 +2999,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -2940,6 +3007,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -2971,6 +3039,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -3024,6 +3093,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -3046,6 +3116,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -3062,6 +3133,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -3069,6 +3141,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -3094,6 +3167,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -3161,6 +3235,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3168,6 +3243,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -3181,6 +3257,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -3233,6 +3310,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3291,6 +3369,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3337,6 +3416,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3371,6 +3451,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3378,6 +3459,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -3433,6 +3515,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3491,6 +3574,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3513,6 +3597,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3553,6 +3638,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3560,6 +3646,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -3615,6 +3702,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3655,6 +3743,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3671,6 +3760,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3718,6 +3808,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3725,6 +3816,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -3786,6 +3878,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3844,6 +3937,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3878,6 +3972,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3900,6 +3995,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -3907,6 +4003,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -3914,6 +4011,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -3954,6 +4052,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4000,6 +4099,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4046,6 +4146,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4053,6 +4154,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -4060,6 +4162,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -4088,6 +4191,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -4152,6 +4256,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4198,6 +4303,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4232,6 +4338,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4266,6 +4373,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4273,6 +4381,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -4312,6 +4421,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4335,6 +4445,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4342,6 +4453,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -4349,6 +4461,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -4413,6 +4526,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4447,6 +4561,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4469,6 +4584,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4497,6 +4613,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                         default:
                           
                           // Unknown::unknown(([], {}))
+                          std::cout << "UNKNOWN" << std::endl;
                           return 1;//Unknown(machInst);
                           break;
                         }
@@ -4504,6 +4621,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                     default:
                       
                       // Unknown::unknown(([], {}))
+                      std::cout << "UNKNOWN" << std::endl;
                       return 1;//Unknown(machInst);
                       break;
                     }
@@ -4550,6 +4668,7 @@ Decoder::decodeInst(ExtMachInst machInst)
                 default:
                   
                   // Unknown::unknown(([], {}))
+                  std::cout << "UNKNOWN" << std::endl;
                   return 1;//Unknown(machInst);
                   break;
                 }
@@ -4557,6 +4676,7 @@ Decoder::decodeInst(ExtMachInst machInst)
             default:
               
               // Unknown::unknown(([], {}))
+              std::cout << "UNKNOWN" << std::endl;
               return 1;//Unknown(machInst);
               break;
             }
@@ -4564,6 +4684,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -4665,6 +4786,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -4711,6 +4833,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -4778,6 +4901,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -4818,6 +4942,7 @@ Decoder::decodeInst(ExtMachInst machInst)
         default:
           
           // Unknown::unknown(([], {}))
+          std::cout << "UNKNOWN" << std::endl;
           return 1;//Unknown(machInst);
           break;
         }
@@ -4825,6 +4950,7 @@ Decoder::decodeInst(ExtMachInst machInst)
     default:
       
       // Unknown::unknown(([], {}))
+      std::cout << "UNKNOWN" << std::endl;
       return 1;//Unknown(machInst);
       break;
     }
