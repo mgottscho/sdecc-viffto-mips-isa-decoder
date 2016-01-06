@@ -386,6 +386,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "add" << std::endl;
                        return 0;
                       break;
                     
@@ -399,6 +400,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "addu" << std::endl;
                        return 0;
                       break;
                     
@@ -412,6 +414,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "sub" << std::endl;
                        return 0;
                       break;
                     
@@ -425,6 +428,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "subu" << std::endl;
                        return 0;
                       break;
                     
@@ -438,6 +442,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "and" << std::endl;
                        return 0;
                       break;
                     
@@ -451,6 +456,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "or" << std::endl;
                        return 0;
                       break;
                     
@@ -464,6 +470,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "xor" << std::endl;
                        return 0;
                       break;
                     
@@ -477,6 +484,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "nor" << std::endl;
                        return 0;
                       break;
                     
@@ -512,6 +520,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "slt" << std::endl;
                        return 0;
                       break;
                     
@@ -525,6 +534,7 @@ return 0;// Divu(machInst);
                                //}
                            return i;
                        }*/
+                       std::cout << "sltu" << std::endl;
                        return 0;
                       break;
                     
@@ -3384,6 +3394,7 @@ return 0;// Bgtzl(machInst);
                            //}
                        return i;
                    }*/
+                   std::cout << "mul" << std::endl;
                    return 0;
                   break;
                 
