@@ -763,7 +763,8 @@ return 0;// Bposge32(machInst);
                 case 0x7:  
                   // WarnUnimpl::synci([],{})
                   
-                          return 0;// WarnUnimplemented("synci", machInst);
+                          std::cout << "synci" << std::endl;
+return 0;// WarnUnimplemented("synci", machInst);
                   break;
                 
                 default:
@@ -856,6 +857,7 @@ return 0;// Bgtz(machInst);
                // }
                return i;
            }*/
+           std::cout << "addi" << std::endl;
            return 0;
           break;
         
@@ -869,6 +871,7 @@ return 0;// Bgtz(machInst);
                // }
                return i;
            }*/
+           std::cout << "addiu" << std::endl;
            return 0;
           break;
         
@@ -882,6 +885,7 @@ return 0;// Bgtz(machInst);
                // }
                return i;
            }*/
+           std::cout << "slti" << std::endl;
            return 0;
           break;
         
@@ -895,6 +899,7 @@ return 0;// Bgtz(machInst);
                // }
                return i;
            }*/
+           std::cout << "sltiu" << std::endl;
            return 0;
           break;
         
@@ -908,6 +913,7 @@ return 0;// Bgtz(machInst);
                // }
                return i;
            }*/
+           std::cout << "andi" << std::endl;
            return 0;
           break;
         
@@ -921,6 +927,7 @@ return 0;// Bgtz(machInst);
                // }
                return i;
            }*/
+           std::cout << "ori" << std::endl;
            return 0;
           break;
         
@@ -934,6 +941,7 @@ return 0;// Bgtz(machInst);
                // }
                return i;
            }*/
+           std::cout << "xori" << std::endl;
            return 0;
           break;
         
@@ -950,6 +958,7 @@ return 0;// Bgtz(machInst);
                    // }
                    return i;
                }*/
+               std::cout << "lui" << std::endl;
                return 0;
               break;
             
@@ -995,19 +1004,22 @@ return 0;// Mtc0(machInst);
                 case 0x1:  
                   // CP0Unimpl::dmfc0([],{})
                   
-                          return 0;// CP0Unimplemented("dmfc0", machInst);
+                          std::cout << "dmfc0" << std::endl;
+return 0;// CP0Unimplemented("dmfc0", machInst);
                   break;
                 
                 case 0x5:  
                   // CP0Unimpl::dmtc0([],{})
                   
-                          return 0;// CP0Unimplemented("dmtc0", machInst);
+                          std::cout << "dmtc0" << std::endl;
+return 0;// CP0Unimplemented("dmtc0", machInst);
                   break;
                 
                 default:  
                   // CP0Unimpl::unknown([],{})
                   
-                          return 0;// CP0Unimplemented("unknown", machInst);
+                          std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                   break;
                 
                 case 0x8:
@@ -1127,7 +1139,8 @@ return 0;// Mftdsp(machInst);
                             default:  
                               // CP0Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP0Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                               break;
                             }
                           
@@ -1166,7 +1179,8 @@ return 0;// Cftc1(machInst);
                         default:  
                           // CP0Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP0Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                           break;
                         }
                       
@@ -1295,7 +1309,8 @@ return 0;// Mttdsp(machInst);
                             default:  
                               // CP0Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP0Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                               break;
                             }
                           
@@ -1316,7 +1331,8 @@ return 0;// Cttc1(machInst);
                         default:  
                           // CP0Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP0Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                           break;
                         }
                       
@@ -1357,21 +1373,24 @@ return 0;// Evpe(machInst);
                                 default:  
                                   // CP0Unimpl::unknown(([], {}))
                                   
-                                          return 0;// CP0Unimplemented("unknown", machInst);
+                                          std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                                   break;
                                 }
                               
                             default:  
                               // CP0Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP0Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                               break;
                             }
                           
                         default:  
                           // CP0Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP0Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                           break;
                         }
                       
@@ -1401,21 +1420,24 @@ return 0;// Emt(machInst);
                                 default:  
                                   // CP0Unimpl::unknown(([], {}))
                                   
-                                          return 0;// CP0Unimplemented("unknown", machInst);
+                                          std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                                   break;
                                 }
                               
                             default:  
                               // CP0Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP0Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                               break;
                             }
                           
                         default:  
                           // CP0Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP0Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                           break;
                         }
                       
@@ -1442,7 +1464,8 @@ return 0;// Ei(machInst);
                             default:  
                               // CP0Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP0Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                               break;
                             }
                           
@@ -1457,7 +1480,8 @@ return 0;// Ei(machInst);
                     default:  
                       // CP0Unimpl::unknown(([], {}))
                       
-                              return 0;// CP0Unimplemented("unknown", machInst);
+                              std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                       break;
                     }
                   
@@ -1524,13 +1548,15 @@ return 0;// Tlbp(machInst);
                 case 0x20:  
                   // CP0Unimpl::wait([],{})
                   
-                          return 0;// CP0Unimplemented("wait", machInst);
+                          std::cout << "wait" << std::endl;
+return 0;// CP0Unimplemented("wait", machInst);
                   break;
                 
                 default:  
                   // CP0Unimpl::unknown(([], {}))
                   
-                          return 0;// CP0Unimplemented("unknown", machInst);
+                          std::cout << "unknown" << std::endl;
+return 0;// CP0Unimplemented("unknown", machInst);
                   break;
                 }
               
@@ -1596,13 +1622,15 @@ return 0;// Mthc1(machInst);
                     case 0x1:  
                       // CP1Unimpl::dmfc1([],{})
                       
-                              return 0;// CP1Unimplemented("dmfc1", machInst);
+                              std::cout << "dmfc1" << std::endl;
+return 0;// CP1Unimplemented("dmfc1", machInst);
                       break;
                     
                     case 0x5:  
                       // CP1Unimpl::dmtc1([],{})
                       
-                              return 0;// CP1Unimplemented("dmtc1", machInst);
+                              std::cout << "dmtc1" << std::endl;
+return 0;// CP1Unimplemented("dmtc1", machInst);
                       break;
                     
                     default:
@@ -1680,19 +1708,22 @@ return 0;// Bc1tl(machInst);
                     case 0x1:  
                       // CP1Unimpl::bc1any2([],{})
                       
-                              return 0;// CP1Unimplemented("bc1any2", machInst);
+                              std::cout << "bc1any2" << std::endl;
+return 0;// CP1Unimplemented("bc1any2", machInst);
                       break;
                     
                     case 0x2:  
                       // CP1Unimpl::bc1any4([],{})
                       
-                              return 0;// CP1Unimplemented("bc1any4", machInst);
+                              std::cout << "bc1any4" << std::endl;
+return 0;// CP1Unimplemented("bc1any4", machInst);
                       break;
                     
                     default:  
                       // CP1Unimpl::unknown([],{})
                       
-                              return 0;// CP1Unimplemented("unknown", machInst);
+                              std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                       break;
                     }
                   
@@ -1906,14 +1937,16 @@ return 0;// Rsqrt_s(machInst);
                             default:  
                               // CP1Unimpl::unknown([],{})
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
                         case 0x3:  
                           // CP1Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP1Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                           break;
                         
                         case 0x4:
@@ -1950,14 +1983,16 @@ return 0;// Cvt_ps_s(machInst);
                             default:  
                               // CP1Unimpl::unknown([],{})
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
                         case 0x5:  
                           // CP1Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP1Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                           break;
                         
                         case 0x6:
@@ -2298,7 +2333,8 @@ return 0;// Rsqrt_d(machInst);
                             default:  
                               // CP1Unimpl::unknown([],{})
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
@@ -2329,7 +2365,8 @@ return 0;// Cvt_l_d(machInst);
                             default:  
                               // CP1Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
@@ -2470,26 +2507,30 @@ return 0;// C_ngt_d(machInst);
                         default:  
                           // CP1Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP1Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                           break;
                         }
                       
                     case 0x2:  
                       // CP1Unimpl::unknown(([], {}))
                       
-                              return 0;// CP1Unimplemented("unknown", machInst);
+                              std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                       break;
                     
                     case 0x3:  
                       // CP1Unimpl::unknown(([], {}))
                       
-                              return 0;// CP1Unimplemented("unknown", machInst);
+                              std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                       break;
                     
                     case 0x7:  
                       // CP1Unimpl::unknown(([], {}))
                       
-                              return 0;// CP1Unimplemented("unknown", machInst);
+                              std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                       break;
                     
                     case 0x4:
@@ -2512,13 +2553,15 @@ return 0;// Cvt_d_w(machInst);
                         case 0x26:  
                           // CP1Unimpl::cvt_ps_w(([], {}))
                           
-                                  return 0;// CP1Unimplemented("cvt_ps_w", machInst);
+                                  std::cout << "cvt_ps_w" << std::endl;
+return 0;// CP1Unimplemented("cvt_ps_w", machInst);
                           break;
                         
                         default:  
                           // CP1Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP1Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                           break;
                         }
                       
@@ -2542,13 +2585,15 @@ return 0;// Cvt_d_l(machInst);
                         case 0x26:  
                           // CP1Unimpl::cvt_ps_l(([], {}))
                           
-                                  return 0;// CP1Unimplemented("cvt_ps_l", machInst);
+                                  std::cout << "cvt_ps_l" << std::endl;
+return 0;// CP1Unimplemented("cvt_ps_l", machInst);
                           break;
                         
                         default:  
                           // CP1Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP1Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                           break;
                         }
                       
@@ -2603,14 +2648,16 @@ return 0;// Neg_ps(machInst);
                             default:  
                               // CP1Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
                         case 0x1:  
                           // CP1Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP1Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                           break;
                         
                         case 0x2:
@@ -2658,14 +2705,16 @@ return 0;// Movn_ps(machInst);
                             default:  
                               // CP1Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
                         case 0x3:  
                           // CP1Unimpl::unknown(([], {}))
                           
-                                  return 0;// CP1Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                           break;
                         
                         case 0x4:
@@ -2681,7 +2730,8 @@ return 0;// Cvt_s_pu(machInst);
                             default:  
                               // CP1Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
@@ -2726,7 +2776,8 @@ return 0;// Puu(machInst);
                             default:  
                               // CP1Unimpl::unknown(([], {}))
                               
-                                      return 0;// CP1Unimplemented("unknown", machInst);
+                                      std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                               break;
                             }
                           
@@ -2883,7 +2934,8 @@ return 0;// C_ngt_ps(machInst);
                 default:  
                   // CP1Unimpl::unknown(([], {}))
                   
-                          return 0;// CP1Unimplemented("unknown", machInst);
+                          std::cout << "unknown" << std::endl;
+return 0;// CP1Unimplemented("unknown", machInst);
                   break;
                 }
               
@@ -2907,43 +2959,50 @@ return 0;// C_ngt_ps(machInst);
                     case 0x0:  
                       // CP2Unimpl::mfc2([],{})
                       
-                              return 0;// CP2Unimplemented("mfc2", machInst);
+                              std::cout << "mfc2" << std::endl;
+return 0;// CP2Unimplemented("mfc2", machInst);
                       break;
                     
                     case 0x2:  
                       // CP2Unimpl::cfc2([],{})
                       
-                              return 0;// CP2Unimplemented("cfc2", machInst);
+                              std::cout << "cfc2" << std::endl;
+return 0;// CP2Unimplemented("cfc2", machInst);
                       break;
                     
                     case 0x3:  
                       // CP2Unimpl::mfhc2([],{})
                       
-                              return 0;// CP2Unimplemented("mfhc2", machInst);
+                              std::cout << "mfhc2" << std::endl;
+return 0;// CP2Unimplemented("mfhc2", machInst);
                       break;
                     
                     case 0x4:  
                       // CP2Unimpl::mtc2([],{})
                       
-                              return 0;// CP2Unimplemented("mtc2", machInst);
+                              std::cout << "mtc2" << std::endl;
+return 0;// CP2Unimplemented("mtc2", machInst);
                       break;
                     
                     case 0x6:  
                       // CP2Unimpl::ctc2([],{})
                       
-                              return 0;// CP2Unimplemented("ctc2", machInst);
+                              std::cout << "ctc2" << std::endl;
+return 0;// CP2Unimplemented("ctc2", machInst);
                       break;
                     
                     case 0x7:  
                       // CP2Unimpl::mftc2([],{})
                       
-                              return 0;// CP2Unimplemented("mftc2", machInst);
+                              std::cout << "mftc2" << std::endl;
+return 0;// CP2Unimplemented("mftc2", machInst);
                       break;
                     
                     default:  
                       // CP2Unimpl::unknown([],{})
                       
-                              return 0;// CP2Unimplemented("unknown", machInst);
+                              std::cout << "unknown" << std::endl;
+return 0;// CP2Unimplemented("unknown", machInst);
                       break;
                     }
                   
@@ -2956,19 +3015,22 @@ return 0;// C_ngt_ps(machInst);
                         case 0x0:  
                           // CP2Unimpl::bc2f([],{})
                           
-                                  return 0;// CP2Unimplemented("bc2f", machInst);
+                                  std::cout << "bc2f" << std::endl;
+return 0;// CP2Unimplemented("bc2f", machInst);
                           break;
                         
                         case 0x1:  
                           // CP2Unimpl::bc2t([],{})
                           
-                                  return 0;// CP2Unimplemented("bc2t", machInst);
+                                  std::cout << "bc2t" << std::endl;
+return 0;// CP2Unimplemented("bc2t", machInst);
                           break;
                         
                         default:  
                           // CP2Unimpl::unknown([],{})
                           
-                                  return 0;// CP2Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP2Unimplemented("unknown", machInst);
                           break;
                         }
                       
@@ -2978,40 +3040,46 @@ return 0;// C_ngt_ps(machInst);
                         case 0x0:  
                           // CP2Unimpl::bc2fl([],{})
                           
-                                  return 0;// CP2Unimplemented("bc2fl", machInst);
+                                  std::cout << "bc2fl" << std::endl;
+return 0;// CP2Unimplemented("bc2fl", machInst);
                           break;
                         
                         case 0x1:  
                           // CP2Unimpl::bc2tl([],{})
                           
-                                  return 0;// CP2Unimplemented("bc2tl", machInst);
+                                  std::cout << "bc2tl" << std::endl;
+return 0;// CP2Unimplemented("bc2tl", machInst);
                           break;
                         
                         default:  
                           // CP2Unimpl::unknown([],{})
                           
-                                  return 0;// CP2Unimplemented("unknown", machInst);
+                                  std::cout << "unknown" << std::endl;
+return 0;// CP2Unimplemented("unknown", machInst);
                           break;
                         }
                       
                     default:  
                       // CP2Unimpl::unknown([],{})
                       
-                              return 0;// CP2Unimplemented("unknown", machInst);
+                              std::cout << "unknown" << std::endl;
+return 0;// CP2Unimplemented("unknown", machInst);
                       break;
                     }
                   
                 default:  
                   // CP2Unimpl::unknown([],{})
                   
-                          return 0;// CP2Unimplemented("unknown", machInst);
+                          std::cout << "unknown" << std::endl;
+return 0;// CP2Unimplemented("unknown", machInst);
                   break;
                 }
               
             default:  
               // CP2Unimpl::unknown([],{})
               
-                      return 0;// CP2Unimplemented("unknown", machInst);
+                      std::cout << "unknown" << std::endl;
+return 0;// CP2Unimplemented("unknown", machInst);
               break;
             }
           
@@ -3386,7 +3454,8 @@ return 0;// Clo(machInst);
                 case 0x7:  
                   // FailUnimpl::sdbbp(([], {}))
                   
-                          return 0;// FailUnimplemented("sdbbp", machInst);
+                          std::cout << "sdbbp" << std::endl;
+return 0;// FailUnimplemented("sdbbp", machInst);
                   break;
                 
                 default:
@@ -5053,7 +5122,8 @@ return 0;// Rdhwr_se(machInst);
                               
                               // FailUnimpl::rdhwr(([], {}))
                               
-                                      return 0;// FailUnimplemented("rdhwr", machInst);
+                                      std::cout << "rdhwr" << std::endl;
+return 0;// FailUnimplemented("rdhwr", machInst);
                               break;
                             }
                           
@@ -5061,7 +5131,8 @@ return 0;// Rdhwr_se(machInst);
                           
                           // FailUnimpl::rdhwr(([], {}))
                           
-                                  return 0;// FailUnimplemented("rdhwr", machInst);
+                                  std::cout << "rdhwr" << std::endl;
+return 0;// FailUnimplemented("rdhwr", machInst);
                           break;
                         }*/
                       
@@ -5069,7 +5140,8 @@ return 0;// Rdhwr_se(machInst);
                       
                       // FailUnimpl::rdhwr(([], {}))
                       
-                              return 0;// FailUnimplemented("rdhwr", machInst);
+                              std::cout << "rdhwr" << std::endl;
+return 0;// FailUnimplemented("rdhwr", machInst);
                       break;
                     }
                   
@@ -5297,13 +5369,15 @@ return 0;// Cache(machInst);
         case 0x2:  
           // CP2Unimpl::lwc2(([], {}))
           
-                  return 0;// CP2Unimplemented("lwc2", machInst);
+                  std::cout << "lwc2" << std::endl;
+return 0;// CP2Unimplemented("lwc2", machInst);
           break;
         
         case 0x6:  
           // CP2Unimpl::ldc2(([], {}))
           
-                  return 0;// CP2Unimplemented("ldc2", machInst);
+                  std::cout << "ldc2" << std::endl;
+return 0;// CP2Unimplemented("ldc2", machInst);
           break;
         
         case 0x3:  
@@ -5348,13 +5422,15 @@ return 0;// Sdc1(machInst);
         case 0x2:  
           // CP2Unimpl::swc2(([], {}))
           
-                  return 0;// CP2Unimplemented("swc2", machInst);
+                  std::cout << "swc2" << std::endl;
+return 0;// CP2Unimplemented("swc2", machInst);
           break;
         
         case 0x6:  
           // CP2Unimpl::sdc2(([], {}))
           
-                  return 0;// CP2Unimplemented("sdc2", machInst);
+                  std::cout << "sdc2" << std::endl;
+return 0;// CP2Unimplemented("sdc2", machInst);
           break;
         
         default:
