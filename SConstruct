@@ -15,7 +15,8 @@ else:
     print 'unknown platform, exiting'
     exit(1)
 sources = [
-    Glob('src/*.cc'),
+    'src/main.cc',
+    'src/MyDecoder.cc'
 ]
 
 defaultBuild = env.Program(target = 'mipsdecode', source = sources)

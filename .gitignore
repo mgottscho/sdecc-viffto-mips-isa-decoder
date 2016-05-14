@@ -3,3 +3,4 @@ mipsdecode*
 .sconsign.dblite
 *.obj
 *~
+*.mexa64
