@@ -25,6 +25,9 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
     uint32_t raw;
 
     std::stringstream ss;
+    std::stringstream outputStream;
+    std::cout.rdbuf(outputStream.rdbuf()); //Redirect cout
+
     char inputCharString[11];
     mxGetString(prhs[0], inputCharString, 11);
     std::string instString(inputCharString);
@@ -50,6 +53,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
 
     double* output = NULL;
     plhs[0] = mxCreateDoubleMatrix(1,1,mxREAL);
+    plhs[1] = mxCreateString(outputStream.str().c_str());
     output = mxGetPr(plhs[0]);
     if (ret)
         *output = 1;
