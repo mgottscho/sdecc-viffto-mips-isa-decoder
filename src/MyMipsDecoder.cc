@@ -21,20 +21,23 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
             mexErrMsgIdAndTxt("MyToolbox:arrayProduct:notString",
                                   "Input must be a string.");
     }*/
-    
-    uint32_t raw;
-
-    std::stringstream ss;
+   
+    //redirect stdout
     std::stringstream outputStream;
-    std::cout.rdbuf(outputStream.rdbuf()); //Redirect cout
+    std::cout.rdbuf(outputStream.rdbuf()); 
 
-    char inputCharString[11];
-    mxGetString(prhs[0], inputCharString, 11);
+    //Get raw input
+    char inputCharString[9];
+    mxGetString(prhs[0], inputCharString, 8);
+    inputCharString[8] = '\0';
     std::string instString(inputCharString);
+    std::cout << "Raw input: " << instString << std::endl;
+    
+    std::stringstream ss;
+    uint32_t raw;
     ss << std::hex << instString;
     ss >> raw;
 
-    std::cout << "Raw input: " << instString << std::endl;
     std::cout.fill('0');
     std::cout << "Interpreted as: 0x" << std::hex << std::setw(8) << raw << std::dec << std::endl;
     std::cout.fill(' ');
