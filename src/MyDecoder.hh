@@ -28,6 +28,12 @@
  * Authors: Gabe Black
  */
 
+/*
+ * Hacked by:
+ * Author: Mark Gottscho
+ * Email: mgottscho@ucla.edu
+ */ 
+
 #ifndef __ARCH_MIPS_DECODER_HH__
 #define __ARCH_MIPS_DECODER_HH__
 
